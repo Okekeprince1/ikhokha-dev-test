@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ikhokha.techcheck.ui.fragments.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_basketDialogFragment"
+            app:destination="@id/basketDialogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ikhokha.techcheck.ui.fragments.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/basketDialogFragment"
+        android:name="com.ikhokha.techcheck.ui.fragments.dialogs.BasketDialogFragment"
+        android:label="BasketDialogFragment" >
+        <action
+            android:id="@+id/action_basketDialogFragment_to_orderSummary"
+            app:destination="@id/orderSummary" />
+    </dialog>
+    <fragment
+        android:id="@+id/orderSummary"
+        android:name="com.ikhokha.techcheck.ui.fragments.OrderSummary"
+        android:label="order_summary_layout"
+        tools:layout="@layout/order_summary_layout" >
+        <action
+            android:id="@+id/action_orderSummary_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.ikhokha.techcheck.ui.fragments.ProductsFragment"
+        android:label="products_layout"
+        tools:layout="@layout/products_layout" >
+        <action
+            android:id="@+id/action_productsFragment_to_basketDialogFragment"
+            app:destination="@id/basketDialogFragment" />
+    </fragment>
+
+</navigation>

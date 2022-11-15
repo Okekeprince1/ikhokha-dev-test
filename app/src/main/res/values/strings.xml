@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">The Busy Shop</string>
+
+    <string name="product_price">NGN%1$.2f</string>
+    <string name="product_added">One %1$s has been added to your basket.</string>
+
+    <string name="order_name">OrderSummary%1$d\.pdf</string>
+
+    <string name="error_dns">Item not found, please add another!</string>
+    <string name="error">An error has occurred, please try again.</string>
+    <string name="error_barcode">Barcode scan error, try again.</string>
+
+    <string name="login_success">Login success!</string>
+
+    <string name="login_error">Login failed, try again</string>
+
+</resources>
